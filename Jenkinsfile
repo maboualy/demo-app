@@ -10,7 +10,7 @@ pipeline {
     SERVER_CREDENTIAL = credentials('some_credential')
   }
   stages {
-    stage(){
+    stage("init"){
       script {
       dv = load 'script.groovy'
       }
