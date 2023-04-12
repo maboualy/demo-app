@@ -10,6 +10,11 @@ pipeline {
     SERVER_CREDENTIAL = credentials('some_credential')
   }
   stages {
+    stage(){
+      script {
+      dv = load 'script.groovy'
+      }
+    }
     stage("build") {
       when {
         expression {
@@ -18,7 +23,7 @@ pipeline {
       }
       steps {
         script {
-        dv = load 'script.groovy'
+        
           dv.build()
         }
          echo 'building the application ${NEW_VERSION} 1...'
