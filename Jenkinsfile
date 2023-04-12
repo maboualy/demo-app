@@ -1,3 +1,4 @@
+def dv
 pipeline {
   agent any 
   tools {
@@ -16,6 +17,9 @@ pipeline {
         }
       }
       steps {
+        script {
+        dv = load 'script.groovy'
+        }
          echo 'building the application ${NEW_VERSION} 1...'
          sh "mvn install"
         echo "building the application ${NEW_VERSION} 2..."
