@@ -1,5 +1,8 @@
 pipeline {
   agent any 
+  environment {
+    NEW_VERSION = '1.0.0'
+  }
   stages {
     stage("build") {
       when {
@@ -8,7 +11,8 @@ pipeline {
         }
       }
       steps {
-      echo 'building the application..'
+        echo 'building the application ${NEW_VERSION} 1...'
+        echo "building the application ${NEW_VERSION} 2..."
       }
     }
     stage("test"){
