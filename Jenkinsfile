@@ -15,7 +15,7 @@ pipeline {
         echo 'building the application ${NEW_VERSION} 1...'
         echo "building the application ${NEW_VERSION} 2..."
         echo "building the application ${SERVER_CREDENTIAL} 3..."
-        echo 'building the application ${SERVER_CREDENTIAL} 3...'
+        echo 'building the application ${SERVER_CREDENTIAL} 4...'
       }
     }
     stage("test"){
