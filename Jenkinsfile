@@ -11,9 +11,10 @@ pipeline {
   }
   stages {
     stage("init"){
+      steps{
       script {
       dv = load 'script.groovy'
-      }
+      }}
     }
     stage("build") {
       when {
