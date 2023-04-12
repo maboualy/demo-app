@@ -21,7 +21,7 @@ pipeline {
         dv = load 'script.groovy'
         }
          echo 'building the application ${NEW_VERSION} 1...'
-         sh "mvn install"
+         
         echo "building the application ${NEW_VERSION} 2..."
         withCredentials([usernamePassword(credentialsId: 'some_credential', usernameVariable:'USER', passwordVariable:'PWD')]){
           sh 'echo building the application ${USER} ${PWD} 3...'
