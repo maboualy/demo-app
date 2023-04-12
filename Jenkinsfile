@@ -19,6 +19,7 @@ pipeline {
       steps {
         script {
         dv = load 'script.groovy'
+          dv.build()
         }
          echo 'building the application ${NEW_VERSION} 1...'
          
