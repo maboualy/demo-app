@@ -15,7 +15,7 @@ pipeline {
          echo 'building the application ${NEW_VERSION} 1...'
         echo "building the application ${NEW_VERSION} 2..."
         withCredentials([usernamePassword(credentialsId: 'some_credential', usernameVariable:'USER', passwordVariable:'PWD')]){
-          sh "building the application ${USER} ${PWD} 3..."
+          sh 'echo building the application ${USER} ${PWD} 3...'
         }
       }
     }
