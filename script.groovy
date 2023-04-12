@@ -1,4 +1,4 @@
-def build():
+def build(){
   echo "Hello world"
-
+}
 return this
