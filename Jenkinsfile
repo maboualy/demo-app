@@ -12,10 +12,12 @@ pipeline {
         }
       }
       steps {
-        withCredentials([usernamePassword(credentials: 'some_credential', usernameVariable:USER, passwordVariable: PASS )])
+        withCredentials([usernamePassword(credentials: 'some_credential', usernameVariable:USER, passwordVariable:PWD)])
         echo 'building the application ${NEW_VERSION} 1...'
         echo "building the application ${NEW_VERSION} 2..."
-        echo 'building the application ${USER} ${PASS} 3...'
+        {
+          sh "building the application ${USER} ${PWD} 3..."
+        }
       }
     }
     stage("test"){
